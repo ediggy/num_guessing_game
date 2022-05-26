@@ -12,8 +12,9 @@ import java.util.Scanner;
 public class HiLo {
 
 	public static String playAgain = "";
-	public static int min = 1;
-	public static int max = 100;
+	public static int min = 5;
+	public static int range = 5;
+	public static int max = min + range;
 	public static int guess = 0;
 	public static int numGuess = 0;
 
@@ -22,7 +23,7 @@ public class HiLo {
 	public static void main(String[] args) {
 
 		do {
-			int targetNum = (int)(Math.random() * max + min);
+			int targetNum = (int)(Math.random() * range + min);
 			System.out.println(targetNum);
 
 			while (guess != targetNum) {
