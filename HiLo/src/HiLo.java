@@ -1,10 +1,15 @@
 import java.util.Scanner;
 
-
 public class HiLo {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		String playAgain = "";
+		
+		do {
+			
+		
+		
 		// Create a random number for the user to guess
 		int targetNum = (int)(Math.random() * 100 + 1);
 		//System.out.println(targetNum);
@@ -23,7 +28,10 @@ public class HiLo {
 		}
 		
 		System.out.println("Good Job! It took you " + numGuess + " trys!");
+		System.out.println("Would you like to play again? y/n");
+		playAgain = scan.next();
 
+		} while (playAgain.equalsIgnoreCase("y"));
 	}
 
 }
