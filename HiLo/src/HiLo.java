@@ -13,8 +13,9 @@ public class HiLo {
 
 	public static String playAgain = "";
 	public static int min = 1;
-	public static int range = 99;
-	public static int max = min + range;
+	public static int max = 100;
+	public static int mathMax = max + 1; //to make max inclusive
+	public static int range = mathMax-min;
 	public static int guess = 0;
 	public static int numGuess = 0;
 
