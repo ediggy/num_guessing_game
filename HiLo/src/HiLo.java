@@ -12,25 +12,25 @@ import java.util.Scanner;
 public class HiLo {
 
 	public static String playAgain = "";
-	public static int min = 5;
-	public static int range = 5;
+	public static int min = 1;
+	public static int range = 99;
 	public static int max = min + range;
 	public static int guess = 0;
 	public static int numGuess = 0;
 
-	public static Scanner scan = new Scanner(System.in);
+	public static final Scanner scan = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 
 		do {
 			int targetNum = (int)(Math.random() * range + min);
-			System.out.println(targetNum);
+			//System.out.println(targetNum);
 
 			while (guess != targetNum) {
 				System.out.print("Guess a number between " + min + " and " + max + ": ");
 				
 				while (!scan.hasNextInt()) {
-					System.out.println("Please enter a whole number.");
+					System.out.print("Please enter a whole number.");
 					scan.next();
 				}
 				
